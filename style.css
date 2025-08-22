@@ -1,0 +1,396 @@
+/* Universal selector: Applies to all elements */
+:root {
+    --bg-color: #041014;
+    --text-color: #EAEAEA;
+}
+
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    font-family: sans-serif; /* Sets a default font */
+}
+
+/* Body styles */
+body {
+    background: var(--bg-color); /* Sets the background color */
+    color: var(--text-color);
+}
+
+/* Header styles */
+.header {
+    background: var(--bg-color); /* Sets the background color */
+    color: var(--text-color); /* Sets the text color */
+    padding: 20px 10%; /* Sets the padding (top/bottom and left/right) */
+    position: fixed; /* Fixes the header to the viewport */
+    width: 100%; /* Sets the width to 100% of the viewport */
+    top: 0; /* Positions the header at the top */
+    left: 0; /* Positions the header at the left */
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Distributes items evenly with space between them */
+    align-items: center; /* Aligns items vertically to the center */
+    z-index: 100; /* Ensures the header is on top of other elements */
+}
+
+/* Logo styles */
+.logo {
+    font-size: 25px; /* Sets the font size */
+    color: var(--text-color); /* Sets the text color */
+    text-decoration: none; /* Removes the underline from links */
+    font-weight: 600; /* Sets the font weight */
+    position: relative;
+}
+
+/* Navbar styles */
+.navbar a {
+    font-size: 18px; /* Sets the font size */
+    color: var(--text-color); /* Sets the text color */
+    text-decoration: none; /* Removes the underline from links */
+    font-weight: 500; /* Sets the font weight */
+    margin-left: 30px; /* Sets the left margin */
+    transition: .3s; /* Adds a smooth transition effect */
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00c7b1; /* Changes the text color on hover */
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-color);
+    position: relative;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00c7b1;
+    position: relative;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    position: relative;
+    text-align: justify;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    position: relative;
+}
+
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00c7b1;
+    border: 2px solid #00c7b1;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #041014;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #00c7b1;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #041014;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #00c7b1;
+    overflow: hidden;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s;
+}
+
+.home-img:hover img {
+    opacity: 0.2;
+}
+
+.about-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-content p {
+    text-align: justify;
+}
+
+.publication-card {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0 20px 0; /* Removed auto for left alignment */
+    text-align: center;
+    width: 300px; /* Adjust as needed */
+    border-radius: 5px;
+    transform: rotate(-2deg); /* Optional: for a slight tilt */
+}
+
+.publication-card h3 {
+    color: #041014; /* Dark color for text on light background */
+    margin-bottom: 10px;
+}
+
+.publication-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#construction-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 16, 20, 0.95); /* Using var(--bg-color) with transparency */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: var(--text-color);
+    font-size: 24px;
+    text-align: center;
+}
+
+#construction-banner p {
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+#close-banner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: #00c7b1;
+    border: 2px solid #00c7b1;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #041014;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#close-banner:hover {
+    background: transparent;
+    color: #00c7b1;
+}
+
+.about h2 {
+    margin-bottom: 2rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.services-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.project-grid {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    overflow-x: auto;
+    position: relative;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.project-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.project-container {
+    flex: 0 0 300px; /* to have a fixed width for each project */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-container:hover {
+    transform: translateY(-10px);
+}
+
+.project-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00c7b1;
+}
+
+.project-container p {
+    text-align: justify;
+}
+
+.key-technologies {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.key-technologies img {
+    width: 40px;
+    height: 40px;
+}
+
+.scroll-buttons {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.scroll-buttons button {
+    background: transparent;
+    border: 2px solid #00c7b1;
+    color: #00c7b1;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.scroll-buttons button:hover {
+    background: #00c7b1;
+    color: #041014;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 9%;
+    background: #041014;
+    color: #EAEAEA;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    #menu-icon {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+    .home-content {
+        order: 2;
+        text-align: center;
+    }
+
+    .home-img {
+        order: 1;
+        width: 200px;
+        height: 200px;
+        flex-shrink: 0;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+    }
+}
