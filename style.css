@@ -182,11 +182,29 @@ body {
     margin-bottom: 10px;
 }
 
+.read-it-btn {
+    display: inline-block;
+    background-color: #00c7b1;
+    color: #041014;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.read-it-btn:hover {
+    background-color: #00a291;
+}
+
 .publication-card img {
     width: 100%;
     height: auto;
     display: block;
 }
+
+
 
 #construction-banner {
     position: fixed;
@@ -380,17 +398,18 @@ footer {
     }
 
     .home-content {
-        order: 2;
         text-align: center;
+        order: 2;
     }
 
     .home-img {
-        order: 1;
         width: 200px;
         height: 200px;
         flex-shrink: 0;
+        margin-top: 2rem;
         margin-bottom: 2rem;
         border-radius: 50%;
+        order: 1;
     }
 
     section {
