@@ -394,7 +394,7 @@ footer {
 
     .home {
         flex-direction: column;
-        margin-top: 5rem;
+        height: auto;
     }
 
     .home-content {
@@ -415,4 +415,16 @@ footer {
     section {
         padding: 7rem 9% 2rem;
     }
+}
+
+.publications-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.publications-container::-webkit-scrollbar {
+    display: none;
 }
